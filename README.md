@@ -77,9 +77,13 @@ This application uses Node.js, Puppeteer, and node-cron to take screenshots of a
 - `RCLONE_DESTINATION` (Optional): The rclone destination where the screenshot will be uploaded.
 - `RCLONE_MIN_AGE` (Optional): The minimum age of the files to be deleted using rclone.
 
+> **Note:** To use the rclone feature, you need to have Rclone installed and properly configured on your system. Make sure to set up Rclone and authenticate it with your cloud storage service. You can learn more about Rclone and its installation process by visiting the [Rclone website](https://rclone.org/). Once Rclone is set up, you can configure the `RCLONE_DESTINATION` environment variable with the appropriate remote path where you want to upload the screenshots and set RUN_RCLONE to true.
+
 ## Usage
 
 The application will take a screenshot of the specified webpage at the specified resolution and save it to the specified directory at the specified intervals. You can check the screenshot in the specified directory.
+
+Please ensure that you have Rclone properly set up and configured before enabling the `RUN_RCLONE` feature. Refer to the [Rclone documentation](https://rclone.org/) for detailed instructions on installation, configuration, and usage.
 
 ## License
 
