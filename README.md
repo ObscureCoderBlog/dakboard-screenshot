@@ -31,9 +31,12 @@ This application uses Node.js, Puppeteer, and node-cron to take screenshots of a
 
     ```
     DAKBOARD_URL=https://example.com
-    SCREENSHOT_PATH=./screenshot.png
+    SCREENSHOT_PATH=/path/to/your/screenshot.png
     SCREENSHOT_RESOLUTION=1920x1080
-    CRON_SCHEDULE=*/5 * * * *
+    CRON_SCHEDULE=*/1 * * * *
+    RUN_RCLONE=false
+    RCLONE_DESTINATION=gphotos:album/DakBoard
+    RCLONE_MIN_AGE=4m
     ```
 
     Replace the placeholders with your actual data.
@@ -70,6 +73,9 @@ This application uses Node.js, Puppeteer, and node-cron to take screenshots of a
 - `SCREENSHOT_PATH`: The path where the screenshot will be saved. Use `./<filename>` for the current directory.
 - `SCREENSHOT_RESOLUTION`: The resolution at which the screenshot will be taken, in the format `<width>x<height>`.
 - `CRON_SCHEDULE`: The schedule on which the screenshot will be taken, as a cron expression.
+- `RUN_RCLONE`: Whether or not to run the rclone upload & delete code.
+- `RCLONE_DESTINATION` (Optional): The rclone destination where the screenshot will be uploaded.
+- `RCLONE_MIN_AGE` (Optional): The minimum age of the files to be deleted using rclone.
 
 ## Usage
 
