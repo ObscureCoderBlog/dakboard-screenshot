@@ -12,13 +12,13 @@ This application uses Node.js, Puppeteer, and node-cron to take screenshots of a
 1. Clone the repository:
 
     ```
-    git clone <your-repository-url>
+    git clone git@github.com:ObscureCoderBlog/dakboard-screenshot.git
     ```
 
 2. Navigate into the project directory:
 
     ```
-    cd <project-directory>
+    cd dakboard-screenshot
     ```
 
 3. Install the dependencies:
