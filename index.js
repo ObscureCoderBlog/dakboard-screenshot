@@ -14,7 +14,7 @@ const rcloneMinAge = process.env.RCLONE_MIN_AGE;
 async function takeScreenshot() {
     console.log('launch browser for screenshot');
 
-    // Launch browser
+    // Launch browser, no sandbox arguments for running in container, it can be removed if not being run in docker
     const browser = await puppeteer.launch({
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
