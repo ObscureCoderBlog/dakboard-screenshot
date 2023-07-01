@@ -1,0 +1,1 @@
+This folder is the default write folder for the screenshot. You it is m

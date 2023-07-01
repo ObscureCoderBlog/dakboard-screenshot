@@ -12,8 +12,12 @@ const rcloneDestination = process.env.RCLONE_DESTINATION;
 const rcloneMinAge = process.env.RCLONE_MIN_AGE;
 
 async function takeScreenshot() {
+    console.log('launch browser for screenshot');
+
     // Launch browser
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
 
     // Set viewport to the specified resolution

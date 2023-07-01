@@ -85,6 +85,16 @@ The application will take a screenshot of the specified webpage at the specified
 
 Please ensure that you have Rclone properly set up and configured before enabling the `RUN_RCLONE` feature. Refer to the [Rclone documentation](https://rclone.org/) for detailed instructions on installation, configuration, and usage.
 
+## Docker
+
+This application can be run through docker, see below commands to build the image and run it.
+
+```
+docker build -t dakboardscreenshot .
+docker run -p 49160:3000 --env-file .env -v /path/on/host:/app/img -d dakboardscreenshot
+```
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
